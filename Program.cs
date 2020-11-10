@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections;
+using System.Linq;
 
 
 namespace EgetArbete
@@ -34,7 +35,7 @@ namespace EgetArbete
             Console.WriteLine(" 12) Palindromtest");
             Console.WriteLine(" 13) Skriver ut alla tal mellan 2 tal");
             Console.WriteLine("##### 14)");
-            Console.WriteLine("##### 15)");
+            Console.WriteLine(" 15) Vad är summan av 5st siffror?");
             Console.WriteLine("##### 16)");
             Console.Write("\r\nVälj en siffra och tryck på ENTER: ");
 
@@ -346,12 +347,20 @@ namespace EgetArbete
 
         private static void O14()
         {
-
+            
         }
 
         private static void O15()
         {
-
+            Console.Clear();
+            Console.WriteLine("Skriv 5st siffror med , imellan");
+            string input = Console.ReadLine();
+            int sum = input.Split(new char[] { ',' })
+                           .Select(n => Int32.Parse(n))
+                           .Sum();
+            Console.Write("Resultatet av dessa är " + sum);
+            Console.Write("\r\n\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.ReadLine();
         }
 
         private static void O16()
