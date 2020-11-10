@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+using System.Collections;
 
 
 namespace EgetArbete
@@ -33,7 +31,7 @@ namespace EgetArbete
             Console.WriteLine(" 9) Roten ur, Upphöjt i 2 och 10");
             Console.WriteLine(" 10) Multiplikationstabel");
             Console.WriteLine(" 11) Sorterar talen");
-            Console.WriteLine("##### 12)");
+            Console.WriteLine(" 12) Palindromtest");
             Console.WriteLine("##### 13)");
             Console.WriteLine("##### 14)");
             Console.WriteLine("##### 15)");
@@ -276,10 +274,28 @@ namespace EgetArbete
         private static void O11()
         {
             Console.Clear();
-            int Min = 0;
-            int Max = 100;
+            ArrayList Arrlst_Sort = new ArrayList();
+            Random rnd = new Random();
 
-            Console.WriteLine(String.Join(",", Enumerable.Range(Min, Max).OrderBy(x => Guid.NewGuid()).Take(5).OrderBy(n => n)));
+            Arrlst_Sort.Add(rnd.Next(1, 101));
+            Arrlst_Sort.Add(rnd.Next(1, 101));
+            Arrlst_Sort.Add(rnd.Next(1, 101));
+            Arrlst_Sort.Add(rnd.Next(1, 101));
+            Arrlst_Sort.Add(rnd.Next(1, 101));
+
+            System.Console.WriteLine("5 slumpade nummer\n");
+            foreach (var temp in Arrlst_Sort)
+            {
+                System.Console.WriteLine(temp);
+            }
+            Arrlst_Sort.Sort();
+            System.Console.WriteLine("\ndom 5 nummren sorterade\n");
+            foreach (var temp in Arrlst_Sort)
+
+            {
+                System.Console.WriteLine(temp);
+            }
+
 
             Console.Write("\r\nTryck på ENTER för att komma tillbaka till huvudmenyn");
             Console.ReadLine();
@@ -287,7 +303,27 @@ namespace EgetArbete
 
         private static void O12()
         {
-
+            Console.Clear();
+            string _inputstr, _reversestr = string.Empty;
+            Console.Write("Skriv in ord : ");
+            _inputstr = Console.ReadLine();
+            if (_inputstr != null)
+            {
+                for (int i = _inputstr.Length - 1; i >= 0; i--)
+                {
+                    _reversestr += _inputstr[i].ToString();
+                }
+                if (_reversestr == _inputstr)
+                {
+                    Console.WriteLine("Ordet är en palindrom, {0} och {1}", _inputstr, _reversestr);
+                }
+                else
+                {
+                    Console.WriteLine("Ordet är inte en palindrom, {0} och {1}", _inputstr, _reversestr);
+                }
+            }
+            Console.Write("\r\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.ReadLine();
         }
 
         private static void O13()
