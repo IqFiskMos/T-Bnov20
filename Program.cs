@@ -284,17 +284,17 @@ namespace EgetArbete
             Arrlst_Sort.Add(rnd.Next(1, 101));
             Arrlst_Sort.Add(rnd.Next(1, 101));
 
-            System.Console.WriteLine("5 slumpade nummer\n");
+            Console.WriteLine("5 slumpade nummer\n");
             foreach (var temp in Arrlst_Sort)
             {
-                System.Console.WriteLine(temp);
+                Console.WriteLine(temp);
             }
             Arrlst_Sort.Sort();
-            System.Console.WriteLine("\ndom 5 nummren sorterade\n");
+            Console.WriteLine("\ndom 5 nummren sorterade\n");
             foreach (var temp in Arrlst_Sort)
 
             {
-                System.Console.WriteLine(temp);
+                Console.WriteLine(temp);
             }
 
 
@@ -340,8 +340,7 @@ namespace EgetArbete
             {
                 Console.Write("{0} ", resultat);
             }
-            Console.Write("\n");
-            Console.Write("\r\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.Write("\r\n\nTryck på ENTER för att komma tillbaka till huvudmenyn");
             Console.ReadLine();
         }
 
