@@ -1,1 +1,1 @@
-![Image of project](https://i.gyazo.com/88ec99ac73210d0393e3bc17492867a2.png)
+![Image of project](https://i.gyazo.com/79f7d52b1a80595dba8526c57439ad74.png)

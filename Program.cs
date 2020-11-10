@@ -32,7 +32,7 @@ namespace EgetArbete
             Console.WriteLine(" 10) Multiplikationstabel");
             Console.WriteLine(" 11) Sorterar talen");
             Console.WriteLine(" 12) Palindromtest");
-            Console.WriteLine("##### 13)");
+            Console.WriteLine(" 13) Skriver ut alla tal mellan 2 tal");
             Console.WriteLine("##### 14)");
             Console.WriteLine("##### 15)");
             Console.WriteLine("##### 16)");
@@ -328,7 +328,20 @@ namespace EgetArbete
 
         private static void O13()
         {
-
+            Console.Clear();
+            int resultat;
+            Console.WriteLine("Skriv en siffra");
+            int min = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Skriv en siffra som är högre än den första");
+            int max = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            for (resultat = min; resultat <= max; resultat++)
+            {
+                Console.Write("{0} ", resultat);
+            }
+            Console.Write("\n");
+            Console.Write("\r\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.ReadLine();
         }
 
         private static void O14()
