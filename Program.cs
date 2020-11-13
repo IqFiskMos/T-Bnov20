@@ -34,10 +34,10 @@ namespace EgetArbete
             Console.WriteLine(" 11) Sorterar talen");
             Console.WriteLine(" 12) Palindromtest");
             Console.WriteLine(" 13) Skriver ut alla tal mellan 2 tal");
-            Console.WriteLine("##### 14)");
+            Console.WriteLine(" 14) EJ FÄRDIG!!!");
             Console.WriteLine(" 15) Vad är summan av 5st siffror?");
-            Console.WriteLine("##### 16)");
-            Console.Write("\r\nVälj en siffra och tryck på ENTER: ");
+            Console.WriteLine(" 16) EJ FÄRDIG!!!");
+            Console.Write("\r\n Välj en siffra och tryck på ENTER: ");
 
             switch (Console.ReadLine())
             {
@@ -346,7 +346,10 @@ namespace EgetArbete
 
         private static void O14()
         {
-            
+            Console.Clear();
+
+            Console.Write("\r\n\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.ReadLine();
         }
 
         private static void O15()
@@ -364,7 +367,24 @@ namespace EgetArbete
 
         private static void O16()
         {
+            Random rnd = new Random();
 
+            Console.Clear();
+            Console.WriteLine("Vad heter du?");
+            string player = Console.ReadLine();
+            Console.WriteLine("Vad heter jag");
+            string bot = Console.ReadLine();
+
+            int playerhp = rnd.Next(1, 101);
+            int playerdmg = rnd.Next(1, 101);
+            int playerluck = rnd.Next(1, 101);
+
+            int bothp = rnd.Next(1, 101);
+            int botdmg = rnd.Next(1, 101);
+            int botluck = rnd.Next(1, 101);
+
+            Console.Write("\r\n\nTryck på ENTER för att komma tillbaka till huvudmenyn");
+            Console.ReadLine();
         }
     }
 }
